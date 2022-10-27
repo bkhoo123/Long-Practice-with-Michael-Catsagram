@@ -1,12 +1,6 @@
 // import {createImage} from './catImage.js';
 import {addCat} from './button.js'
-import {votes} from './button.js'
 import {erase} from './button.js'
-import { buildStorage } from "./storage.js";
-import { clearStorageValues } from "./storage.js";
-
-
-
 
 const initializePage = async () => {
     // create a container
@@ -23,7 +17,13 @@ const initializePage = async () => {
     const img = document.createElement('img');
     img.style.width = '500px'
     img.style.height = '500px'
-    img.setAttribute("src", await addCat())
+
+    if(localStorage.getItem("catImage")) {
+        img.src = localStorage.getItem("catImage");
+    } else {
+        img.setAttribute("src", await addCat())
+    }
+
     img.id = 'catImage'
     container.appendChild(img)
 
@@ -48,32 +48,35 @@ const ul = document.createElement("ul")
 ul.id = "comment-Body"
 document.body.appendChild(ul)
 
+const li = document.createElement("li")
+const commentBody = document.getElementById("comment-Body")
+
+if(localStorage.getItem("comment")) {
+    li.innerText = localStorage.getItem("comment");
+}
+
 const addComment = () => {
-
-    const commentBody = document.getElementById("comment-Body")
-
-    const li = document.createElement("li")
 
     li.innerText = userInput.value
 
-    commentBody.appendChild(li)
+    commentBody.appendChild(li);
+
+    localStorage.setItem("comment", userInput.value)
 
     userInput.value = "";
 }
+
+// ari said to use somehow
+// localStorage.comment = JSON.stringify(comments)
+
+
 
 const comment = document.getElementById("comments")
 comment.addEventListener("click", () => {
     addComment()
 })
 
-window.onload = () => {
-    initializePage()
-    addCat()
-    votes()
-    erase()
-    buildStorage()
-    clearStorageValues()
-}
+window.onload = initializePage()
 
 
 // window.onload purpose is store multiple single functions

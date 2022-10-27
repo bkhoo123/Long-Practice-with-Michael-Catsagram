@@ -2,6 +2,9 @@
 import {addCat} from './button.js'
 import {votes} from './button.js'
 import {erase} from './button.js'
+import { buildStorage } from "./storage.js";
+import { clearStorageValues } from "./storage.js";
+
 
 
 
@@ -29,7 +32,7 @@ const initializePage = async () => {
     const commentBody = document.getElementById("comment-Body");
     const midContainer = document.getElementById("midContainer")
     const lastContainer = document.getElementById("lastContainer")
-    
+
 
 
     placeHolderText.innerText = clickContainer;
@@ -68,6 +71,8 @@ window.onload = () => {
     addCat()
     votes()
     erase()
+    buildStorage()
+    clearStorageValues()
 }
 
 

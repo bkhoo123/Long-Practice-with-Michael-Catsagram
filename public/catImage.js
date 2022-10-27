@@ -1,3 +1,4 @@
+
 //? Adds a Cat on load
 export const createImage = () => {
     const img = document.createElement("img")
@@ -26,4 +27,3 @@ const fetchImage = async () => {
     const img = document.querySelector('img')
     img.src = url
 }
-

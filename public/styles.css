@@ -5,7 +5,7 @@ h1 {
 }
 
 h2 {
-    text-align: center; 
+    text-align: center;
     font-family: serif;
 }
 
@@ -32,11 +32,15 @@ body {
     font-weight: bold;
 }
 
+#clicked-count {
+    margin-right: 10px;
+}
+
 #comment-Body {
     background-color: white;
     list-style-type: none;
     font-size: 20px;
-    
+
     position: relative;
     bottom: 20px;
     border: 3px solid black;

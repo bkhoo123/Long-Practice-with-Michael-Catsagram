@@ -4,6 +4,11 @@ h1 {
 
 }
 
+h2 {
+    text-align: center; 
+    font-family: serif;
+}
+
 body {
     background-image: url(57200.jpg)
 }
@@ -23,23 +28,29 @@ body {
     padding: 10px;
     display: flex;
     gap: 10px;
-    background-color: white;
+    background-color: floralwhite;
+    font-weight: bold;
 }
 
 #comment-Body {
     background-color: white;
     list-style-type: none;
     font-size: 20px;
-    padding: 10px;
+    
     position: relative;
     bottom: 20px;
     border: 3px solid black;
     width: 50%;
+    height: 300px;
 }
 
-/* #comments-container {
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: white;
-    border: 5px solid blue;
+/* #newCat {
+   position: relative;
+   bottom: 5px;
 } */
+
+#midContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}

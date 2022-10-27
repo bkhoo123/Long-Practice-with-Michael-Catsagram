@@ -8,30 +8,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catstagram</title>
 </head>
-<h1>Welcome to InstacatGram</h1>
+<h1>Welcome to Catsagram</h1>
 
 <body>
 
   <div class = "buttons">
-    <button id="newCat">Get a New Cat</button>
+    
 
     <span id="click-container">
-      <button id="up-vote">Likes</button>
-      <button id="down-vote">Dislike</button>
-      <span id="clicked-count">0</span> Likes
-      <button id="comments">Add Comment </button>
-      <input id="userInput" type="text">
-      <button id="delete">Delete Comments</button>
+      
+      Popularity Counter:
+      <span id="clicked-count">0</span> 
+      
+      
     </span>
 
-
+    <div id= "midContainer">
+      <button id="newCat">Get a New Cat</button>
+      <button id="up-vote">Like</button>
+       <button id="down-vote">Dislike</button>
+    </div>
+    
+    <div id = "lastContainer">
+      Comment:
+      
+      <input id="userInput" type="text">
+      <button id="comments">Submit </button>
+      <button id="delete">Delete Comments</button>
+    </div>
 
   </div>
-  <div class = "midContainer">
-    <p>
-
-    </p>
-  </div>
+  
+  
   <script type="module" src="./index.js"></script>
 
 </body>

@@ -27,8 +27,15 @@ const initializePage = async () => {
     const placeHolderText = document.createElement("placeHolder");
     const clickContainer = document.getElementById("click-container");
     const commentBody = document.getElementById("comment-Body");
+    const midContainer = document.getElementById("midContainer")
+    const lastContainer = document.getElementById("lastContainer")
+    
+
+
     placeHolderText.innerText = clickContainer;
     container.append(clickContainer);
+    container.append(midContainer)
+    container.append(lastContainer)
     container.append(commentBody);
 }
 
@@ -58,7 +65,6 @@ comment.addEventListener("click", () => {
 
 window.onload = () => {
     initializePage()
-    console.log("this is loading")
     addCat()
     votes()
     erase()
